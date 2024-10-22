@@ -1,0 +1,65 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+    background-image: url('zodiac-symbols.jpg'); /* URL of the image */
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff; /* Optional: change the text color to make it readable */
+    background-color: #f4f4f9;
+    
+}
+
+.calculator-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+label {
+    color: black; /* Change this to the desired color (e.g., white) */
+    font-size: 13px; /* Optional: Adjust the font size if needed */
+    font-weight: bold; /* Optional: Makes the label text bold */
+}
+
+h1 {
+    color: #333;
+}
+
+input, select {
+    font-size: 16px;  /* Adjust this size as needed */
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    font-size: 14px; /* Adjust this size as needed */
+    font-weight: bold;  /* Optional: Makes the button text bold */
+    padding: 20px 30px;
+    background-color: #ffb343;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
