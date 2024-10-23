@@ -42,7 +42,7 @@ function calculateRisingTime() {
             // Calculate the degree of the Sun based on the day within the range
             const daysInZodiac = (end - start) / (1000 * 60 * 60 * 24); // Get total days in the range
             const dayWithinZodiac = (inputDate - start) / (1000 * 60 * 60 * 24); // Get how many days into the zodiac we are
-            degreeOfSun = Math.floor((dayWithinZodiac / daysInZodiac) * maxDegree);
+            degreeOfSun = Math.round((dayWithinZodiac / daysInZodiac) * maxDegree);
             break;
         }
     }
