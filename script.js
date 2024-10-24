@@ -66,11 +66,11 @@ function calculateRisingTime() {
     const leadMinutes = minutesLead % 60;
 
     // Format the time (add leading zero if needed)
-    const formattedRisingTime = ${risingHours}:${risingMinutes < 10 ? '0' : ''}${risingMinutes} AM;
+    const formattedRisingTime = `${risingHours}:${risingMinutes < 10 ? '0' : ''}${risingMinutes} AM`;
 
     // Display the result
-    document.getElementById('result').innerHTML = 
+    document.getElementById('result').innerHTML = `
         The degree of the sun in ${zodiacSign} is ${degreeOfSun}.<br>
         The rising time of ${zodiacSign} is: ${formattedRisingTime} leading the sun 🌞 by ${leadHours} hour${leadHours !== 1 ? 's' : ''} ${leadMinutes < 10 ? '0' : ''}${leadMinutes} minutes of local time.
-    ;
+    `;
 }
