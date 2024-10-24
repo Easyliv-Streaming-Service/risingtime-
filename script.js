@@ -39,9 +39,11 @@ function calculateRisingTime() {
             zodiacSign = sign;
 
             // Calculate the degree of the Sun based on the day within the range
-            const daysInZodiac = (end - start) / (1000 * 60 * 60 * 24); // Get total days in the range
-            const dayWithinZodiac = (inputDate - start) / (1000 * 60 * 60 * 24); // Get how many days into the zodiac we are
-            degreeOfSun = Math.round((dayWithinZodiac / daysInZodiac) * maxDegree);
+            const daysInZodiac = (end - start) / (1000 * 60 * 60 * 24); // Total days in the zodiac period
+            const dayWithinZodiac = (inputDate - start) / (1000 * 60 * 60 * 24); // Days since the start of the zodiac sign
+
+            // Ensure 1st degree starts at the beginning and progresses
+            degreeOfSun = Math.floor((dayWithinZodiac / daysInZodiac) * (maxDegree - 1)) + 1; // Degree from 1 to maxDegree
             break;
         }
     }
