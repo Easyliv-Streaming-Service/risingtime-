@@ -1,4 +1,3 @@
-// script.js
 function calculateRisingTime() {
     const inputDate = new Date(document.getElementById('date').value);
 
@@ -52,8 +51,8 @@ function calculateRisingTime() {
         return;
     }
 
-    // Calculate rising time using the formula: degree × 4 = rt (rising time in minutes)
-    const minutesLead = degreeOfSun * 4; // 4 minutes per degree
+    // Calculate rising time using the formula: degree × 3 = rt (rising time in minutes)
+    const minutesLead = degreeOfSun * 3; // 3 minutes per degree
     const sunRiseTime = 6 * 60; // 6:00 AM in minutes
     const risingTimeInMinutes = sunRiseTime - minutesLead;
 
