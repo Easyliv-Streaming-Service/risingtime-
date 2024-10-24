@@ -12,20 +12,20 @@ function calculateRisingTime() {
     const month = inputDate.getMonth() + 1; // JavaScript months are 0-indexed (Jan = 0)
     const year = inputDate.getFullYear();
 
-    // Zodiac ranges in the sidereal calendar (day and month format)
+    // Corrected Zodiac ranges in the sidereal calendar (day and month format)
     const zodiacRanges = [
-        { sign: "Aries", start: new Date(year, 3, 22), end: new Date(year, 4, 22), maxDegree: 31 },
-        { sign: "Taurus", start: new Date(year, 4, 23), end: new Date(year, 5, 20), maxDegree: 29 },
-        { sign: "Gemini", start: new Date(year, 5, 21), end: new Date(year, 6, 20), maxDegree: 30 },
-        { sign: "Cancer", start: new Date(year, 6, 21), end: new Date(year, 7, 20), maxDegree: 31 },
-        { sign: "Leo", start: new Date(year, 7, 21), end: new Date(year, 8, 22), maxDegree: 33 },
-        { sign: "Virgo", start: new Date(year, 8, 23), end: new Date(year, 9, 24), maxDegree: 32 },
-        { sign: "Libra", start: new Date(year, 9, 25), end: new Date(year, 10, 23), maxDegree: 30 },
-        { sign: "Scorpio", start: new Date(year, 10, 24), end: new Date(year, 11, 21), maxDegree: 28 },
-        { sign: "Sagittarius", start: new Date(year, 11, 22), end: new Date(year, 0, 17), maxDegree: 27 },
-        { sign: "Capricorn", start: new Date(year, 0, 18), end: new Date(year, 1, 16), maxDegree: 30 },
-        { sign: "Aquarius", start: new Date(year, 1, 17), end: new Date(year, 2, 19), maxDegree: 31 },
-        { sign: "Pisces", start: new Date(year, 2, 20), end: new Date(year, 3, 21), maxDegree: 33 }
+        { sign: "Aries", start: new Date(year, 3, 22), end: new Date(year, 4, 21), maxDegree: 31 },   // April 22 - May 21
+        { sign: "Taurus", start: new Date(year, 4, 22), end: new Date(year, 5, 21), maxDegree: 29 },  // May 22 - June 21
+        { sign: "Gemini", start: new Date(year, 5, 22), end: new Date(year, 6, 21), maxDegree: 30 },  // June 22 - July 21
+        { sign: "Cancer", start: new Date(year, 6, 22), end: new Date(year, 7, 21), maxDegree: 31 },  // July 22 - August 21
+        { sign: "Leo", start: new Date(year, 7, 22), end: new Date(year, 8, 22), maxDegree: 33 },     // August 22 - September 22
+        { sign: "Virgo", start: new Date(year, 8, 23), end: new Date(year, 9, 24), maxDegree: 32 },   // September 23 - October 24
+        { sign: "Libra", start: new Date(year, 9, 25), end: new Date(year, 10, 23), maxDegree: 30 },  // October 25 - November 23
+        { sign: "Scorpio", start: new Date(year, 10, 24), end: new Date(year, 11, 22), maxDegree: 28 },// November 24 - December 22
+        { sign: "Sagittarius", start: new Date(year, 11, 23), end: new Date(year, 0, 17), maxDegree: 27 },// December 23 - January 17
+        { sign: "Capricorn", start: new Date(year, 0, 18), end: new Date(year, 1, 16), maxDegree: 30 },// January 18 - February 16
+        { sign: "Aquarius", start: new Date(year, 1, 17), end: new Date(year, 2, 18), maxDegree: 31 }, // February 17 - March 18
+        { sign: "Pisces", start: new Date(year, 2, 19), end: new Date(year, 3, 21), maxDegree: 33 }   // March 19 - April 21
     ];
 
     // Find the zodiac sign based on the input date
