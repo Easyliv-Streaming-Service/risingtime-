@@ -54,10 +54,7 @@ function calculateRisingTime() {
     // Calculate rising time using the formula: degree × 4 = rt (rising time in minutes)
     const minutesLead = degreeOfSun * 4; // 4 minutes per degree
     const sunRiseTime = 6 * 60; // 6:00 AM in minutes
-    let risingTimeInMinutes = sunRiseTime - minutesLead;
-
-    // Subtract an additional minute from the total time
-    risingTimeInMinutes -= 1;
+    const risingTimeInMinutes = sunRiseTime - minutesLead;
 
     // Convert minutes back to hours and minutes
     const risingHours = Math.floor(risingTimeInMinutes / 60);
