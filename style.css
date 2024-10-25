@@ -34,6 +34,10 @@ h1 {
     color: #333;
 }
 
+h4 {
+    color: #333;
+}
+
 input, select {
     font-size: 16px;  /* Adjust this size as needed */
     width: 100%;
